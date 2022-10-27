@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'bahnschrift';
+    src: url(./fonts/BAHNSCHRIFT.TTF);
+}
+
+@import './variables/colors';
+
+@import './gen/reset';
+@import './gen/gen';
+
+@import './components/header';
+@import './components/footer';
+@import './components/home-products';
+@import './components/latest-posts';
+@import './components/products-slider';
+
+@import './woocommerce/content-product';
+
+@import './pages/homepage';

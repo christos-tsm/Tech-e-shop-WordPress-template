@@ -1,0 +1,132 @@
+.home-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+
+    &__container {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__sidebar {
+        max-width: 450px;
+
+        &-single {
+            display: flex;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            img {
+                height: 450px;
+                object-fit: cover;
+            }
+
+            &-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                color: #fff;
+                z-index: 2;
+
+                & > h4 {
+                    position: relative;
+                    width: fit-content;
+                    font-size: 20px;
+                    font-weight: 400;
+                    .count {
+                        display: inline-block;
+                        padding: 3px 8px;
+                        min-width: 25px;
+                        border-radius: 15px;
+                        color: #333;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 1;
+                        flex-shrink: 0;
+                        background-color: #fff;
+                        transform: translateY(-10px);
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &-subcategories {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+            li {
+                a {
+                    color: #fff;
+                    transition: all ease-in-out 250ms;
+                    font-weight: 100;
+                    font-size: 14px;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+
+        &-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        &-tabs {
+            ul {
+                display: flex;
+                gap: 20px;
+                li {
+                    a {
+                        color: #333;
+                        font-size: 18px;
+                        position: relative;
+                        font-weight: 400;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0;
+                            width: 0;
+                            height: 1px;
+                            background-color: #333;
+                            transition: all ease-in-out 250ms;
+                        }
+
+                        &:hover {
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .tab-active {
+
+                        &::before {
+                            width: 100%;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,57 @@
+.products {
+
+    &__container {
+        margin-top: 80px;
+        .section-title,
+        .section-subtitle {
+            text-align: center;
+        }
+
+        &:hover {
+            .chevron {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-slider {
+
+        &__container {
+            margin-top: 40px;
+
+            /* the slides */
+            .slick-slide {
+                margin: 0 25px;
+            }
+
+            /* the parent */
+            .slick-list {
+                margin: 0 -25px;
+            }
+
+            .chevron svg path { stroke: #333; }
+
+            position: relative;
+
+            .chevron {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all ease-in-out 150ms;
+                opacity: 0;
+                cursor: pointer;
+
+                &-next {
+                    right: -50px;
+                }
+
+                &-prev {
+                    left: -50px;
+                }
+
+            }
+        }
+
+    }
+
+}

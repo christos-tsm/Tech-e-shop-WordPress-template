@@ -1,0 +1,306 @@
+.topbar {
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px .65rem;
+    max-width: 1920px;
+    margin: auto;
+
+    a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__container {
+        background-color: $primary-color;
+    }
+}
+
+.site-header {
+
+    &__container {
+        border-bottom: 1px solid #e8e8e8;
+        position: fixed;
+        top: 0;
+        z-index: 90;
+        width: 100%;
+        background: #fff;
+        transition: all ease-in-out 250ms;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 10px 0.65rem;
+        gap: 30px;
+        max-width: 1920px;
+        margin: auto;
+    }
+
+    &__logo {
+        a {
+            display: flex;
+            width: 225px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__menu {
+
+        .menu {
+            &__ul {
+                display: flex;
+                gap: 40px;
+            }
+
+            &__item {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+    }
+
+    &__search {
+        width: 900px;
+        max-width: 100%;
+
+        .dgwt-wcas-no-submit .dgwt-wcas-sf-wrapp input[type="search"].dgwt-wcas-search-input {
+            border-radius: 20px;
+            background-color: #f9f9f9;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+}
+
+/** Categories menu **/ 
+
+#products-burger-close {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;  
+}
+
+.categories-menu {
+
+    &__container{
+        position: fixed;
+        top: 40px;
+        left: 285px;
+        height: 100vh;
+        background: #fff;
+        width: 380px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease-in-out 250ms;
+        z-index: 93;
+        &--active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        
+        .icon-close-menu {
+            svg {
+                width: 16px;
+                margin: auto;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #e8e8e8;
+        height: 61px;
+        align-items: center;
+        padding: 0 2px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        &-single {
+            flex: 1;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border-radius: 15px;
+                color: #333;
+                font-size: 13px;
+                transition: all ease-in-out 250ms;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            &:nth-child(1) {
+                a {
+
+                    background-color: #F4C8FF;
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+
+                    background-color: #EBF5FF;
+                }
+            }
+
+            &:nth-child(3) {
+                a {
+
+                    background-color: #FFFBDB;
+                }
+            }
+        }
+    }
+
+    &__sub-category {
+        position: absolute;
+        left: 380px;
+        background: #fff;
+        top: 61px;
+        padding: 20px;
+        width: 780px;
+        border-left: 1px solid #eee;
+        min-height: 500px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease-in-out 250ms;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .categories-menu__sub-category-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        &--active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .depth-children {
+
+            & > a {
+                font-weight: 600;
+            }
+
+            a {
+                transition: all ease-in-out 250ms;
+                font-size: 15px;
+                color: #333;
+                &:hover{
+                    color: $primary-color !important;
+                }
+            }
+        }
+    }
+
+    &__title {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    &__list-item {
+
+        & > a {
+            font-size: 18px;
+            color: #333;
+        }
+
+        &-parent {
+            display: flex;
+            padding: 20px;
+            transition: all ease-in-out 250ms;
+            &:hover {
+                background-color: $primary-color;
+                color: #fff !important;
+            }
+
+        }
+
+        &.has-children {
+
+            & > a {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../assets/images/arrow-right.svg);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: all ease-in-out 250ms;
+                }
+
+            }
+
+        }
+
+        &--active {
+            & > a {
+                background-color: $primary-color;
+                color: #fff !important;
+
+                &::after {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+    &__depth-2 {
+        li {
+            &:not(:last-child) {
+                margin: 15px 0;
+            }
+
+            a {
+                font-size: 13px !important;
+                color: #686868 !important;
+            }
+        }
+    }
+
+}
