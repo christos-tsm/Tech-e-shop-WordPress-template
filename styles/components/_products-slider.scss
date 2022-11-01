@@ -21,14 +21,14 @@
 
             /* the slides */
             .slick-slide {
-                margin: 0 25px;
+                margin: 0 15px;
                 display: flex !important;
                 flex-direction: column !important;
             }
 
             /* the parent */
             .slick-list {
-                margin: 0 -25px;
+                margin: 0 -15px;
             }
 
             .chevron svg path { stroke: #333; }
@@ -42,13 +42,24 @@
                 transition: all ease-in-out 150ms;
                 opacity: 0;
                 cursor: pointer;
+                @media screen and (max-width: 1440px) {
+                    top: -30px;
+                    // opacity: 1;
+                }
 
                 &-next {
                     right: -50px;
+                    @media screen and (max-width: 1440px) {
+                        right: 5px;
+                    }
                 }
 
                 &-prev {
                     left: -50px;
+                    @media screen and (max-width: 1440px) {
+                        left: auto;
+                        right: 45px;
+                    }
                 }
 
             }

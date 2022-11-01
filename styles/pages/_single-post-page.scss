@@ -1,13 +1,26 @@
-.default-page {
+.post-content {
+
     &__container {
-        padding: 60px 0 0;
-        min-height: calc(100vh - 535px);
+
+        .cta {
+            margin-top: 30px;
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
     }
-}
 
-.page-content {
+    &__thumbnail {
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    }
 
-    &--simple {
+    &__text {
+        flex: 1;
         h2,h3,h4 {
             font-size: 25px;
             margin-bottom: 5px;
@@ -42,17 +55,5 @@
             }
             list-style-position: inside;
         }
-    }
-
-}
-
-.entry-header {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    .entry-title {
-        font-size: 30px;
-        font-weight: 400;
-
     }
 }

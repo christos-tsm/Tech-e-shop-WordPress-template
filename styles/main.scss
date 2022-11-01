@@ -2,18 +2,19 @@
     font-family: 'bahnschrift';
     src: url(./fonts/BAHNSCHRIFT.TTF);
 }
-
+/*Site variables*/ 
 @import './variables/colors';
-
+/*Site general rules*/ 
 @import './gen/reset';
 @import './gen/gen';
-
+/*Components*/ 
 @import './components/header';
 @import './components/footer';
 @import './components/home-products';
 @import './components/latest-posts';
+@import './components/single-post';
 @import './components/products-slider';
-
+/*Woocommerce Styles*/ 
 @import './woocommerce/content-product';
 @import './woocommerce/single-product-page';
 @import './woocommerce/shop';
@@ -21,7 +22,10 @@
 @import './woocommerce/checkout';
 @import './woocommerce/wishlist';
 @import './woocommerce/my-account';
-
+@import './woocommerce/thankyou';
+/*Pages*/
 @import './pages/homepage';
 @import './pages/default';
 @import './pages/404';
+@import './pages/single-post-page';
+@import './pages/blog';

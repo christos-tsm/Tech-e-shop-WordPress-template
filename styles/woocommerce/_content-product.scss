@@ -98,6 +98,13 @@ li.product {
     .woocommerce-loop-product__link {
         overflow: hidden;
         display: flex;
+        @media screen and ( max-width: 1439px ) {
+            height: 280px;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     img {

@@ -22,7 +22,7 @@
 
                 <ul>
 
-                    <li><a href="#!"><?php _e('About us', 'storefront') ?></a></li>
+                    <li><a href="/privacy-policy"><?php _e('Privacy Policy', 'storefront') ?></a></li>
 
                     <li><a href="#!"><?php _e('Blog', 'storefront') ?></a></li>
 

@@ -14,73 +14,6 @@
         }
 
     }
-
-
-    .post-single {
-
-        &__thumbnail {
-            height: 220px;
-            display: flex;
-            overflow: hidden;
-            img {
-                object-fit: cover;
-                transition: all ease-in-out 250ms;
-            }
-        }
-
-        &__title {
-            & > a {
-                font-weight: 400;
-                font-size: 20px;
-                color: #333;
-            }
-            margin: 20px 0;
-        }
-
-        &__date {
-            color: #686868;
-            font-size: 15px;
-            margin: 20px 0;
-        }
-
-        &__excerpt {
-            color: #686868;
-            font-size: 15px;
-            line-height: 22px;
-            margin: 20px 0;
-        }
-
-        &__footer {
-            a {
-                display: flex;
-                align-items: center;
-                color: #686868;
-                transition: all ease-in-out 250ms;
-            }
-        }
-
-        &:hover {
-
-            .post-single__thumbnail {
-                img {
-                    transform: scale(1.1);
-                }
-            }
-
-            .post-single__footer {
-                a {
-                    svg {
-                        path {
-                            fill: $primary-color;
-                        }
-                    }
-                }
-            }
-
-        }
-
-    }
-
 }
 
 
@@ -92,12 +25,12 @@
 
     /* the slides */
     .slick-slide {
-        margin: 0 25px;
+        margin: 0 15px;
     }
 
     /* the parent */
     .slick-list {
-        margin: 0 -25px;
+        margin: 0 -15px;
     }
 
     .chevron {
@@ -107,13 +40,24 @@
         transition: all ease-in-out 150ms;
         opacity: 0;
         cursor: pointer;
-
+        @media screen and (max-width: 1440px) {
+            top: -30px;
+            // opacity: 1;
+        }
+        
         &-next {
             right: -50px;
+            @media screen and (max-width: 1440px) {
+                right: 5px;
+            }
         }
 
         &-prev {
             left: -50px;
+            @media screen and (max-width: 1440px) {
+                left: auto;
+                right: 45px;
+            }
         }
 
     }

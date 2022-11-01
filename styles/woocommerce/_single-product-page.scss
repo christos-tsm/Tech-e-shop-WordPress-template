@@ -37,6 +37,7 @@
     
         .summary {
             flex-basis: 47%;
+            flex: 1;
         }
     
         .flex-control-thumbs {
@@ -216,6 +217,12 @@ form.cart {
     margin-bottom: 30px;
     a {
         color: #686868;
+    }
+
+    & > div:not(.yith-wcwl-add-button) {
+        a {
+            color: $primary-color;
+        }
     }
 }
 

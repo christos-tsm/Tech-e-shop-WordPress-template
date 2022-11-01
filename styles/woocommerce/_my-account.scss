@@ -56,6 +56,20 @@ body.woocommerce-account {
     }
 }
 
+.woocommerce-orders-table {
+    width: 100%;
+
+    thead {
+        tr {
+            th {
+                text-align: left;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+}
+
 /*Register-Login*/ 
 #customer_login {
     display: flex;

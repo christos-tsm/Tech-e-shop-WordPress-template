@@ -44,6 +44,18 @@
 
 			<div class="topbar">
 
+				<div class="topbar__text">
+
+					<p><?php the_field('topbar_text1', 'option'); ?></p>
+
+				</div>
+
+				<div class="topbar__text topbar__text--center">
+
+					<p><?php the_field('topbar_text2', 'option'); ?></p>
+
+				</div>
+
 				<?php if (have_rows('tels', 'option')) : ?>
 
 					<?php while (have_rows('tels', 'option')) : the_row(); ?>

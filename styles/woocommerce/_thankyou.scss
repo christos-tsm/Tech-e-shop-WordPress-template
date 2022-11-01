@@ -1,0 +1,51 @@
+body.woocommerce-order-received {
+    .default-page__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 435px);
+
+    }
+
+    .site-main {
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            right: -50px;
+            bottom: 0;
+            opacity: 0.2;
+            max-width: 50vw;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    .woocommerce-order {
+        text-align: center;
+    }
+
+    .cta--secondary {
+        margin: 30px auto 0;
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    .site-footer {
+        margin-top: 0;
+    }
+}
+
+.woocommerce-thankyou {
+    &-email-notice,
+    &-order-received {
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &-email-notice {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}

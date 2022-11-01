@@ -1,10 +1,27 @@
 .topbar {
-
     display: flex;
     justify-content: flex-end;
     padding: 10px .65rem;
     max-width: 1920px;
     margin: auto;
+
+    &__text {
+        flex: 1;
+        p {
+            color: #fff;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &--center {
+            text-align: center;
+        }
+    }
+
+    address {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
 
     a {
         color: #fff;
@@ -95,6 +112,9 @@
             border-radius: 20px;
             background-color: #f9f9f9;
         }
+        @media screen and (max-width: 1920px) {
+            width: 650px;
+        }
     }
 
     &__icons {
@@ -106,6 +126,10 @@
 
         & .icon {
             position: relative;
+        }
+
+        @media screen and (max-width: 1920px) {
+            padding-right: 10px;
         }
     }
 
@@ -125,7 +149,7 @@
     &__container{
         position: fixed;
         top: 40px;
-        left: 306px;
+        left: 313px;
         height: 100vh;
         background: #fff;
         width: 380px;

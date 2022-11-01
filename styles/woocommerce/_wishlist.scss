@@ -2,9 +2,18 @@ table.wishlist_table {
     width: 100%;
 }
 
-.wishlist_table tr td.product-thumbnail a img {
-    width: 100%;
-    height: 100%;
+.wishlist_table {
+    tr td.product-thumbnail a img {
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        color: #333;
+        &:hover{
+            color: $primary-color;
+        }
+    }
 }
 
 .wishlist-title-container,
