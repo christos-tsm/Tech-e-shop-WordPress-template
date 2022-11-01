@@ -58,7 +58,7 @@
 
                 <?php $image = get_sub_field('image'); ?>
 
-                <?php $video_url = get_sub_field('video_url'); ?>
+                <?php $video = get_sub_field('video'); ?>
 
                 <?php $link = get_sub_field('link'); ?>
 
@@ -66,7 +66,7 @@
 
                     <img src="<?php echo esc_url($image['url']) ?>" alt="<?php the_sub_field('title'); ?>">
 
-                    <?php if (!$video_url) : ?>
+                    <?php if (!$video) : ?>
 
                         <div class="home-intro__right-single-content">
 
@@ -89,13 +89,19 @@
 
                     <?php endif; ?>
 
-                    <?php if ($video_url) : ?>
+                    <?php if ($video) : ?>
 
-                        <a href="javascript:void(0);" id="play-video" class="video-indicator">
+                        <a href="javascript:void(0);" id="play-video" class="video__indicator">
 
                             <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/play.svg'); ?>
 
                         </a>
+
+                        <div class="video__container">
+
+                            <?php the_sub_field('video'); ?>
+
+                        </div>
 
                     <?php endif; ?>
 

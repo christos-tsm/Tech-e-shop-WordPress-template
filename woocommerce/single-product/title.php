@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Single Product title
  *
@@ -15,8 +16,29 @@
  * @version    1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+global $product;
+
+?>
+
+<div class="product-single__title-container">
+
+	<h1 class="product-single__title"><?php the_title(); ?></h1>
+
+</div>
+
+<p class="product-single__price <?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>">
+
+	<?php echo $product->get_price_html(); ?>
+
+</p>
+
+<div class="product-single__content">
+
+	<?php the_content(); ?>
+
+</div>
+<?php

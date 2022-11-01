@@ -1,0 +1,172 @@
+body.woocommerce-cart {
+    .entry-header {
+        display: none;
+    }
+}
+
+.woocommerce-cart-form__contents  {
+    width: 100%;
+
+    thead {
+        tr {
+            th {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .product-thumbnail {
+        padding: 10px;
+        a {
+            display: flex;
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+
+    .cart_item {
+        text-align: center;
+
+        .product-price bdi,
+        .product-name a {
+            color: #686868;
+        }
+
+        .product-name a:hover {
+            color: $primary-color;
+        }
+
+        .quantity {
+            justify-content: center;
+        }
+
+        &:nth-child(even) {
+            td {
+                background-color: #f1f1f1;
+            }
+        }
+
+        .product-remove {
+            a {
+                margin: auto;
+            }
+        } 
+    }
+
+    .actions {
+        .coupon {
+            padding: 20px;
+
+            input {
+                padding: 10px 15px;
+                border: 1px solid $primary-color;
+                margin: 0 15px;
+            }
+
+            button {
+                background-color: $primary-color;
+                color: #fff;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                cursor: pointer;
+                border: 1px solid $primary-color;
+                transition: all ease-in-out 250ms;
+                font-size: 15px;
+                font-family: bahnschrift;
+            
+                &:hover {
+                    background-color: #fff;
+                    color: $primary-color;
+                }
+            }
+        }
+
+        button[name="update_cart"] {
+            background-color: $primary-color;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            cursor: pointer;
+            border: 1px solid $primary-color;
+            transition: all ease-in-out 250ms;
+            font-size: 15px;
+            font-family: bahnschrift;
+            display: flex;
+            margin-left: auto;
+            &:not(:disabled):hover {
+                background-color: #fff;
+                color: $primary-color;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        
+
+        }
+    }
+}
+
+.cart_totals  {
+    margin-bottom: 30px;
+    table {
+        width: 100%;
+    }
+
+    h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-top: 30px;
+    }
+    table {
+        tbody {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            tr {
+                padding: 20px;
+                min-width: 250px;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            } 
+
+            .order-total {
+                background-color: #eee;
+            }
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        margin-top: 30px;
+
+        a {
+            background-color: $primary-color;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 3px;
+            border: 1px solid $primary-color;
+            transition: all ease-in-out 250ms;
+            font-size: 18px;
+            font-family: bahnschrift;
+            display: flex;
+            justify-content: center;
+            &:hover {
+                background-color: #fff;
+                color: $primary-color;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

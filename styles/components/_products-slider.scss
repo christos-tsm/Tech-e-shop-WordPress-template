@@ -22,6 +22,8 @@
             /* the slides */
             .slick-slide {
                 margin: 0 25px;
+                display: flex !important;
+                flex-direction: column !important;
             }
 
             /* the parent */

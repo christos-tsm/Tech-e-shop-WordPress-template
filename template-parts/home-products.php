@@ -9,7 +9,7 @@ $query = new WP_Query($args);
 
 <section class="container home-products__container">
 
-    <?php if (have_rows('sidebar_categories')) : ?>
+    <?php /* if (have_rows('sidebar_categories')) : ?>
 
         <aside class="home-products__sidebar">
 
@@ -42,13 +42,7 @@ $query = new WP_Query($args);
                                     <li>
 
                                         <?php
-                                        /**
-                                         * WP_Term Object
-                                         */
                                         $term = get_term($subcategory_id, 'product_cat');
-                                        /**
-                                         * The subcategory link
-                                         */
                                         $term_link = get_term_link($term, 'product_cat');
                                         ?>
 
@@ -74,7 +68,7 @@ $query = new WP_Query($args);
 
         </aside>
 
-    <?php endif; ?>
+    <?php endif; */ ?>
 
     <?php if (have_rows('content_products')) : ?>
 
@@ -91,6 +85,8 @@ $query = new WP_Query($args);
                         <h3 class="section-title"><?php the_sub_field('title'); ?></h3>
 
                     </div>
+
+                    <?php /* 
 
                     <div class="home-products__content-tabs">
 
@@ -109,8 +105,11 @@ $query = new WP_Query($args);
                         </ul>
 
                     </div>
+                    
+                    */ ?>
 
                 </div>
+
 
                 <?php if ($query->have_posts()) : ?>
 

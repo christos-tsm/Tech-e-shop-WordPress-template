@@ -117,5 +117,34 @@
              */
             $(this).addClass("categories-menu__list-item--active");
         });
+
+        /**
+         * Open video handler - home-intro.php
+         */
+        $("#play-video").on("click", function () {
+            /**
+             * Open video
+             */
+            $(".video__container").addClass("video--active");
+            /**
+             * Prevent body scroll when video is openned
+             */
+            $("body").css("overflow", "hidden");
+        });
+
+        $(".video__container").on("click", function () {
+            /**
+             * Stop video from playing
+             */
+            $(".video__container iframe").attr("src", $("iframe").attr("src"));
+            /**
+             * Close video
+             */
+            $(this).removeClass("video--active");
+            /**
+             * Reset body scroll
+             */
+            $("body").css("overflow", "visible");
+        });
     });
 })(jQuery);

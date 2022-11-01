@@ -1,0 +1,13 @@
+table.wishlist_table {
+    width: 100%;
+}
+
+.wishlist_table tr td.product-thumbnail a img {
+    width: 100%;
+    height: 100%;
+}
+
+.wishlist-title-container,
+body.woocommerce-wishlist .entry-header {
+    display: none;
+}

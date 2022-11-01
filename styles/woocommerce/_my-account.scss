@@ -1,0 +1,96 @@
+body.woocommerce-account {
+    .entry-header {
+        display: none;
+    }
+}
+
+.woocommerce-MyAccount-navigation {
+    margin-bottom: 40px;
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .woocommerce-MyAccount-navigation-link {
+        opacity: 0.6;
+        a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            padding: 10px 15px 10px 10px;
+            gap: 5px;
+            border: 1px solid #eee;
+
+            &::before {
+                margin-left: 0;
+            }
+        }
+
+        &.is-active {
+            opacity: 1;
+            a {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.woocommerce-MyAccount-content {
+
+    p,a,li, h2,h3,h4,h5,h6 {
+        line-height: 25px;
+    } 
+
+    a:not(.button) {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+
+    .woocommerce-info {
+        background-color: #fff;
+        color: #333;
+        a {
+            margin-right: 20px;
+        }
+    }
+}
+
+/*Register-Login*/ 
+#customer_login {
+    display: flex;
+    gap: 50px;
+
+    a {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    & > div {
+        flex: 1;
+    }
+
+    .woocommerce-form__label-for-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+
+        .woocommerce-form__input-checkbox {
+            width: 10px;
+            height: 10px;
+            accent-color: $primary-color;
+        }
+    }
+
+    .woocommerce-privacy-policy-text {
+        margin-bottom: 20px;
+        p {
+            line-height: 25px;
+        }
+    }
+}

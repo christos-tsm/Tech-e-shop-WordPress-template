@@ -92,7 +92,7 @@
 
 				<ul class="menu__ul">
 
-					<li class="menu__item">
+					<li class="menu__item menu__item--categories">
 
 						<a href="javascript:void(0);" id="products-burger">
 
@@ -109,7 +109,7 @@
 
 					</li>
 
-					<li class="menu__item">
+					<li class="menu__item menu__item--single">
 
 						<a href="#!">
 
@@ -119,7 +119,7 @@
 
 					</li>
 
-					<li class="menu__item">
+					<li class="menu__item menu__item--single">
 
 						<a href="#!">
 
@@ -141,17 +141,19 @@
 
 			<div class="site-header__icons">
 
-				<a href="#!">
+				<a href="<?php echo get_permalink(119); ?>" class="site-header__wishlist">
 
 					<span class="icon icon--small">
 
 						<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/heart.svg'); ?>
 
+						<?php echo do_shortcode("[yith_wcwl_items_count]"); ?>
+
 					</span>
 
 				</a>
 
-				<a href="#!">
+				<a href="<?php echo get_permalink(9); ?>" class="site-header__account">
 
 					<span class="icon icon--small">
 
@@ -161,7 +163,7 @@
 
 				</a>
 
-				<a href="#!">
+				<div class="site-header__cart">
 
 					<span class="icon icon--small">
 
@@ -169,7 +171,9 @@
 
 					</span>
 
-				</a>
+					<?php echo do_shortcode("[woo_cart_but]"); ?>
+
+				</div>
 
 			</div>
 

@@ -1,0 +1,83 @@
+body.archive,
+body.woocommerce-shop {
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        & > li {
+            flex-basis: 32%;
+        }
+    }
+
+}
+
+.shop {
+    &__container {
+        margin-top: 101px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+
+        #secondary {
+            min-width: 350px;
+            padding: 5px 0;
+        }
+
+        #primary {
+            flex: 1;
+            .site-main {
+                margin-top: 0;
+            }
+
+            .storefront-sorting {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 20px 0;
+
+                .woocommerce-notices-wrapper {
+                    flex-basis: 100%;
+                }
+
+                select {
+                    padding: 5px;
+                    background-color: #fff;
+                    color: #686868;
+                    cursor: pointer;
+                }
+            }
+            .storefront-sorting:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.wpfFilterWrapper label {
+    color: #686868;
+}
+
+.wpfCheckboxHier {
+    padding: 15px 0;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        ul {
+            margin-top: 1em;
+        }
+    }
+
+}
+
+ul.products .spinner, 
+.la-spinner, 
+.wpfIconPreview .spinner, 
+.wpfLoaderIconTemplate .spinner, 
+.woobewoo-filter-loader.spinner {
+    background: url('http://mavromataki.local/wp-content/uploads/2022/10/logo_site_22.png') !important;
+    margin-top: 80px;
+}
