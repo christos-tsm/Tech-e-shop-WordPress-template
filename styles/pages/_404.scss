@@ -1,0 +1,14 @@
+div.error-404 {
+    height: calc(100vh - 535px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    .cta--secondary {
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}

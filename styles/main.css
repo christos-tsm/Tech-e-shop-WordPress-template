@@ -1808,4 +1808,16 @@ body.woocommerce-account .entry-header {
 
 .default-page__container {
   padding: 60px 0;
+}
+
+div.error-404 {
+  height: calc(100vh - 535px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+div.error-404 .cta--secondary:hover {
+  background-color: #e31e24;
 }/*# sourceMappingURL=main.css.map */
